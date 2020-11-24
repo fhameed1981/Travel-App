@@ -53,8 +53,9 @@ The app takes 4 user parameters:
 Sydney Canada
 ```
 
-* **Departure date (required)** - You can choose any date from today until 15 days from now. The weather forecast API has a limit of 16 days, so if your trip departs after this, please check back closer to your departure date.
-* **Return date (required)** - You can enter any date on or after your departure date. The limit for the weather forecast is 15 days from today (16 days including today). If your return date is later than that, the forecast won't show those days over 15 from today.
+* **Departure date (required)** - You can choose any date from today.
+
+* **Return date (required)** - You can enter any date on or after your departure date. 
 
 Press the **Submit** button when all data have been entered.
 
