@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Planner App">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Travel Planner</title>
+</head>
+
+<body>
+    <header>
+        <h1>Travel Planner</h1>
+    </header>
+    <form id="input-form" class="input-form">
+        <div id="destination" class="user-input">
+            <label for="destination-city">Destination City</label>
+            <input type="text" id="destination-city" placeholder="Enter destination city">
+        </div>
+        <div id="departure" class="user-input">
+            <label for="departure-date">Departure Date</label>
+            <input type="date" id="departure-date">
+        </div>
+        <div id="return" class="user-input">
+            <label for="return-date">Return Date</label>
+            <input type="date" id="return-date">
+        </div>
+        
+        <div id="error-message" class="error-message"></div>
+        <input type="submit" id="submit-button" class="button" value="Submit">
+        <input type="submit" id="clear-button" class="button" value="Clear Saved Data">
+    </form>
+    <section id="results-container" class="results-container">
+        <h2 id="how-many-sleeps"></h2>
+        <div id="location-image-container" class="location-image-container"></div>
+        <h2 id="forecast-title"></h2>
+    </section>
+    <section id="forecast-card-container" class="forecast-card-container"></section>
+    <section id="api-logo-container" class="api-logo-container">
+        <h4>Powered by these APIs:</h4>
+        <a class="api-link" href="http://www.geonames.org/" target="blank"><img class="logo"
+                src="../api-logos/geonames-logo.jpg" alt="Geonames API logo"></a>
+        <a class="api-link" href="https://www.weatherbit.io/" target="blank"><img class="logo"
+                src="../api-logos/weatherbit-logo.png" alt="Weatherbit API logo"></a>
+        <a class="api-link" href="https://pixabay.com/" target="blank"><img class="logo"
+                src="../api-logos/pixabay-logo.png" alt="Pixabay API logo"></a>
+    </section>
+    <footer>
+        
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
